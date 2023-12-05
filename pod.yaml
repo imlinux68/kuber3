@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: short-app
+  labels:
+    components: frontend
+spec:
+  containers:
+    - name: short-app
+      image: imlinux68/short-app
+      ports:
+        - containerPort: 80
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "100m"
+
